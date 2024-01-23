@@ -19,10 +19,40 @@
             border: 1px solid white;
             padding: 10px;
             background-color: black;
+            max-width: 80%;
         }
 
         .curses-text {
             white-space: pre;
+        }
+
+        .input-line {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .prompt {
+            color: yellow;
+            margin-right: 5px;
+        }
+
+        .user-input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-family: monospace;
+            outline: none;
+            width: 70%;
+            flex-grow: 1;
+        }
+
+        .submit-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
     <title>Curses-like Page</title>
@@ -30,14 +60,17 @@
 <body>
     <div class="curses-box">
         <pre class="curses-text">
-            ┌────────────────────────────────────────────────────────────┐
-            │                                                            │
-            │    psion                                                   |
-            │    experience facilitation                                 |
-            |    <a href="mailto:psion.link+info@gmail.com">connect</a>  |
-            │                                                            │
-            └────────────────────────────────────────────────────────────┘
+                                                         
+│    psion                                                   
+│    experience facilitation                                 
+│    <a href="mailto:psion.link+info@gmail.com">connect</a> 
+
         </pre>
+        
+        <div class="input-line">
+            <span class="prompt">>></span>
+            <input class="user-input" type="text" placeholder="..." />
+        </div>
     </div>
 </body>
 </html>
